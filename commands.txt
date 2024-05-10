@@ -1,0 +1,17 @@
+Create topic:
+    kafka-topics.sh --create --zookeeper zookeeper:2181 --partitions 1 --replication-factor 1 --topic myTopic
+
+List topics:
+    kafka-topics.sh --list --zookeeper zookeeper:2181
+
+Topics desc:
+    kafka-topics.sh --describe --zookeeper zookeeper:2181
+
+Delete topic:
+    kafka-topics.sh --delete --zookeeper zookeeper:2181 --topic myTopic
+
+Run producer:
+    kafka-console-producer.sh --broker-list localhost:9092 --topic myTopic
+    
+Run consumer:
+    kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic myTopic
